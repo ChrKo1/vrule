@@ -1,16 +1,16 @@
 Package: vrule
-Version: 0.1.20260209
-Date: 2026-02-09
+Version: 0.1.20261119
+Date: 2026-11-19
 Title: Tools to validate data based on business validation rules
 Authors@R: c(
   person("Emmanuel", "Blondel", role = c("aut", "cre"), email = "emmanuel.blondel@fao.org", comment = c(ORCID = "0000-0002-5870-5762")),
   person("Alexandre", "Bennici", role = c("aut"), email = "alexandre.bennici@fao.org", comment = c(ORCID = "0000-0003-2160-3487")))
 Maintainer: Emmanuel Blondel <emmanuel.blondel1@gmail.com>
 Depends: R (>= 4.0), methods
-Imports: R6, jsonlite, readr, stringi, stringr, rhandsontable, data.table, parallel
-Suggests: testthat
+Imports: R6, jsonlite, yaml, readr, stringr, rhandsontable, data.table, parallel
+Suggests: testthat, waldo
 Description: Provides tools to validate data based on business validation rules
 License: MIT + file LICENSE
 URL: https://github.com/fdiwg/vrule, https://fdiwg.github.io/vrule/
 BugReports: https://github.com/fdiwg/vrule/issues
-Config/roxygen2/version: 8.0.0
+RoxygenNote: 7.3.3

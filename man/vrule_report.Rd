@@ -6,42 +6,59 @@
 \title{vrule_report}
 \description{
 vrule_report
+
+vrule_report
+}
+\section{Public fields}{
+\if{html}{\out{<div class="r6-fields">}}
+\describe{
+\item{\code{valid}}{valid}
+
+\item{\code{report}}{report}
+}
+\if{html}{\out{</div>}}
 }
 \section{Methods}{
 \subsection{Public methods}{
-  \itemize{
-    \item \href{#method-vrule_report-initialize}{\code{vrule_report$new()}}
-    \item \href{#method-vrule_report-clone}{\code{vrule_report$clone()}}
-  }
+\itemize{
+\item \href{#method-vrule_report-new}{\code{vrule_report$new()}}
+\item \href{#method-vrule_report-clone}{\code{vrule_report$clone()}}
+}
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-vrule_report-initialize"></a>}}
-\if{latex}{\out{\hypertarget{method-vrule_report-initialize}{}}}
-\subsection{\code{vrule_report$new()}}{
-  \subsection{Usage}{
-    \if{html}{\out{<div class="r">}}
-    \preformatted{vrule_report$new(valid = NULL, report = NULL)}
-    \if{html}{\out{</div>}}
-  }
+\if{html}{\out{<a id="method-vrule_report-new"></a>}}
+\if{latex}{\out{\hypertarget{method-vrule_report-new}{}}}
+\subsection{Method \code{new()}}{
+Initializes a validation report
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{vrule_report$new(valid = NULL, report = NULL)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{valid}}{\code{TRUE} or \code{FALSE}}
+
+\item{\code{report}}{report}
+}
+\if{html}{\out{</div>}}
+}
+}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-vrule_report-clone"></a>}}
 \if{latex}{\out{\hypertarget{method-vrule_report-clone}{}}}
-\subsection{\code{vrule_report$clone()}}{
-  The objects of this class are cloneable with this method.
-  \subsection{Usage}{
-    \if{html}{\out{<div class="r">}}
-    \preformatted{vrule_report$clone(deep = FALSE)}
-    \if{html}{\out{</div>}}
-  }
-  \subsection{Arguments}{
-    \if{html}{\out{<div class="arguments">}}
-    \describe{
-      \item{\code{deep}}{Whether to make a deep clone.}
-    }
-    \if{html}{\out{</div>}}
-  }
+\subsection{Method \code{clone()}}{
+The objects of this class are cloneable with this method.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{vrule_report$clone(deep = FALSE)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{deep}}{Whether to make a deep clone.}
+}
+\if{html}{\out{</div>}}
+}
+}
 }

@@ -6,64 +6,90 @@
 \title{vrule_threshold}
 \description{
 vrule_threshold
+
+vrule_threshold
+}
+\details{
+vrule_threshold
 }
 \section{Super classes}{
-\code{vrule_abstract} -> \code{\link[vrule:vrule_operator_binary]{vrule_operator_binary}} -> \code{\link[vrule:vrule_operator_relational]{vrule_operator_relational}} -> \code{vrule_threshold}
+\code{\link[vrule:vrule_abstract]{vrule::vrule_abstract}} -> \code{\link[vrule:vrule_operator_binary]{vrule::vrule_operator_binary}} -> \code{\link[vrule:vrule_operator_relational]{vrule::vrule_operator_relational}} -> \code{vrule_threshold}
 }
 \section{Methods}{
 \subsection{Public methods}{
-  \itemize{
-    \item \href{#method-vrule_threshold-initialize}{\code{vrule_threshold$new()}}
-    \item \href{#method-vrule_threshold-validate}{\code{vrule_threshold$validate()}}
-    \item \href{#method-vrule_threshold-clone}{\code{vrule_threshold$clone()}}
-  }
+\itemize{
+\item \href{#method-vrule_threshold-new}{\code{vrule_threshold$new()}}
+\item \href{#method-vrule_threshold-validate}{\code{vrule_threshold$validate()}}
+\item \href{#method-vrule_threshold-clone}{\code{vrule_threshold$clone()}}
 }
-\if{html}{\out{<details open><summary>Inherited methods</summary>
+}
+\if{html}{\out{
+<details open><summary>Inherited methods</summary>
 <ul>
-  <li><code>vrule_abstract$getCategory()</code></li>
-  <li><code>vrule_abstract$getName()</code></li>
-  <li><code>vrule_abstract$getType()</code></li>
+<li><span class="pkg-link" data-pkg="vrule" data-topic="vrule_abstract" data-id="getCategory"><a href='../../vrule/html/vrule_abstract.html#method-vrule_abstract-getCategory'><code>vrule::vrule_abstract$getCategory()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="vrule" data-topic="vrule_abstract" data-id="getName"><a href='../../vrule/html/vrule_abstract.html#method-vrule_abstract-getName'><code>vrule::vrule_abstract$getName()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="vrule" data-topic="vrule_abstract" data-id="getType"><a href='../../vrule/html/vrule_abstract.html#method-vrule_abstract-getType'><code>vrule::vrule_abstract$getType()</code></a></span></li>
 </ul>
-</details>}}
+</details>
+}}
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-vrule_threshold-initialize"></a>}}
-\if{latex}{\out{\hypertarget{method-vrule_threshold-initialize}{}}}
-\subsection{\code{vrule_threshold$new()}}{
-  \subsection{Usage}{
-    \if{html}{\out{<div class="r">}}
-    \preformatted{vrule_threshold$new(operator, threshold, ...)}
-    \if{html}{\out{</div>}}
-  }
+\if{html}{\out{<a id="method-vrule_threshold-new"></a>}}
+\if{latex}{\out{\hypertarget{method-vrule_threshold-new}{}}}
+\subsection{Method \code{new()}}{
+Initializes a threshold validation rule
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{vrule_threshold$new(operator, threshold, ...)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{operator}}{operator}
+
+\item{\code{threshold}}{threshold}
+
+\item{\code{...}}{any other arg}
+}
+\if{html}{\out{</div>}}
+}
+}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-vrule_threshold-validate"></a>}}
 \if{latex}{\out{\hypertarget{method-vrule_threshold-validate}{}}}
-\subsection{\code{vrule_threshold$validate()}}{
-  \subsection{Usage}{
-    \if{html}{\out{<div class="r">}}
-    \preformatted{vrule_threshold$validate(value, ...)}
-    \if{html}{\out{</div>}}
-  }
+\subsection{Method \code{validate()}}{
+Validates data based on a threshold
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{vrule_threshold$validate(value, ...)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{value}}{value}
+
+\item{\code{...}}{any other args}
+}
+\if{html}{\out{</div>}}
+}
+\subsection{Returns}{
+a validation report, object of class \link{vrule_report}
+}
+}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-vrule_threshold-clone"></a>}}
 \if{latex}{\out{\hypertarget{method-vrule_threshold-clone}{}}}
-\subsection{\code{vrule_threshold$clone()}}{
-  The objects of this class are cloneable with this method.
-  \subsection{Usage}{
-    \if{html}{\out{<div class="r">}}
-    \preformatted{vrule_threshold$clone(deep = FALSE)}
-    \if{html}{\out{</div>}}
-  }
-  \subsection{Arguments}{
-    \if{html}{\out{<div class="arguments">}}
-    \describe{
-      \item{\code{deep}}{Whether to make a deep clone.}
-    }
-    \if{html}{\out{</div>}}
-  }
+\subsection{Method \code{clone()}}{
+The objects of this class are cloneable with this method.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{vrule_threshold$clone(deep = FALSE)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{deep}}{Whether to make a deep clone.}
+}
+\if{html}{\out{</div>}}
+}
+}
 }

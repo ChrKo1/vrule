@@ -6,64 +6,90 @@
 \title{vrule_operator_relational}
 \description{
 vrule_operator_relational
+
+vrule_operator_relational
+}
+\details{
+vrule_operator_relational
 }
 \section{Super classes}{
-\code{vrule_abstract} -> \code{\link[vrule:vrule_operator_binary]{vrule_operator_binary}} -> \code{vrule_operator_relational}
+\code{\link[vrule:vrule_abstract]{vrule::vrule_abstract}} -> \code{\link[vrule:vrule_operator_binary]{vrule::vrule_operator_binary}} -> \code{vrule_operator_relational}
 }
 \section{Methods}{
 \subsection{Public methods}{
-  \itemize{
-    \item \href{#method-vrule_operator_relational-initialize}{\code{vrule_operator_relational$new()}}
-    \item \href{#method-vrule_operator_relational-validate}{\code{vrule_operator_relational$validate()}}
-    \item \href{#method-vrule_operator_relational-clone}{\code{vrule_operator_relational$clone()}}
-  }
+\itemize{
+\item \href{#method-vrule_operator_relational-new}{\code{vrule_operator_relational$new()}}
+\item \href{#method-vrule_operator_relational-validate}{\code{vrule_operator_relational$validate()}}
+\item \href{#method-vrule_operator_relational-clone}{\code{vrule_operator_relational$clone()}}
 }
-\if{html}{\out{<details open><summary>Inherited methods</summary>
+}
+\if{html}{\out{
+<details open><summary>Inherited methods</summary>
 <ul>
-  <li><code>vrule_abstract$getCategory()</code></li>
-  <li><code>vrule_abstract$getName()</code></li>
-  <li><code>vrule_abstract$getType()</code></li>
+<li><span class="pkg-link" data-pkg="vrule" data-topic="vrule_abstract" data-id="getCategory"><a href='../../vrule/html/vrule_abstract.html#method-vrule_abstract-getCategory'><code>vrule::vrule_abstract$getCategory()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="vrule" data-topic="vrule_abstract" data-id="getName"><a href='../../vrule/html/vrule_abstract.html#method-vrule_abstract-getName'><code>vrule::vrule_abstract$getName()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="vrule" data-topic="vrule_abstract" data-id="getType"><a href='../../vrule/html/vrule_abstract.html#method-vrule_abstract-getType'><code>vrule::vrule_abstract$getType()</code></a></span></li>
 </ul>
-</details>}}
+</details>
+}}
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-vrule_operator_relational-initialize"></a>}}
-\if{latex}{\out{\hypertarget{method-vrule_operator_relational-initialize}{}}}
-\subsection{\code{vrule_operator_relational$new()}}{
-  \subsection{Usage}{
-    \if{html}{\out{<div class="r">}}
-    \preformatted{vrule_operator_relational$new(operator, expr, ...)}
-    \if{html}{\out{</div>}}
-  }
+\if{html}{\out{<a id="method-vrule_operator_relational-new"></a>}}
+\if{latex}{\out{\hypertarget{method-vrule_operator_relational-new}{}}}
+\subsection{Method \code{new()}}{
+Initializes a operator relational validation rule
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{vrule_operator_relational$new(operator, expr, ...)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{operator}}{operator}
+
+\item{\code{expr}}{expr}
+
+\item{\code{...}}{any other arg}
+}
+\if{html}{\out{</div>}}
+}
+}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-vrule_operator_relational-validate"></a>}}
 \if{latex}{\out{\hypertarget{method-vrule_operator_relational-validate}{}}}
-\subsection{\code{vrule_operator_relational$validate()}}{
-  \subsection{Usage}{
-    \if{html}{\out{<div class="r">}}
-    \preformatted{vrule_operator_relational$validate(value, ...)}
-    \if{html}{\out{</div>}}
-  }
+\subsection{Method \code{validate()}}{
+Abstract method to validate data
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{vrule_operator_relational$validate(value, ...)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{value}}{value}
+
+\item{\code{...}}{any other args}
+}
+\if{html}{\out{</div>}}
+}
+\subsection{Returns}{
+a validation report, object of class \link{vrule_report}
+}
+}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-vrule_operator_relational-clone"></a>}}
 \if{latex}{\out{\hypertarget{method-vrule_operator_relational-clone}{}}}
-\subsection{\code{vrule_operator_relational$clone()}}{
-  The objects of this class are cloneable with this method.
-  \subsection{Usage}{
-    \if{html}{\out{<div class="r">}}
-    \preformatted{vrule_operator_relational$clone(deep = FALSE)}
-    \if{html}{\out{</div>}}
-  }
-  \subsection{Arguments}{
-    \if{html}{\out{<div class="arguments">}}
-    \describe{
-      \item{\code{deep}}{Whether to make a deep clone.}
-    }
-    \if{html}{\out{</div>}}
-  }
+\subsection{Method \code{clone()}}{
+The objects of this class are cloneable with this method.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{vrule_operator_relational$clone(deep = FALSE)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{deep}}{Whether to make a deep clone.}
+}
+\if{html}{\out{</div>}}
+}
+}
 }

@@ -6,71 +6,119 @@
 \title{vrule_mapping}
 \description{
 vrule_mapping
+
+vrule_mapping
 }
 \section{Super classes}{
-\code{vrule_abstract} -> \code{vrule_abstract_complex} -> \code{vrule_mapping}
+\code{\link[vrule:vrule_abstract]{vrule::vrule_abstract}} -> \code{\link[vrule:vrule_abstract_complex]{vrule::vrule_abstract_complex}} -> \code{vrule_mapping}
+}
+\section{Public fields}{
+\if{html}{\out{<div class="r6-fields">}}
+\describe{
+\item{\code{ref_data_url}}{ref data url}
+
+\item{\code{ref_data}}{ref data}
+
+\item{\code{ref_source_term}}{ref source term}
+
+\item{\code{ref_target_term}}{ref target term}
+
+\item{\code{data_target_term}}{data target term}
+
+\item{\code{ref_meta_url}}{ref meta url}
+
+\item{\code{ref_meta}}{ref meta}
+}
+\if{html}{\out{</div>}}
 }
 \section{Methods}{
 \subsection{Public methods}{
-  \itemize{
-    \item \href{#method-vrule_mapping-initialize}{\code{vrule_mapping$new()}}
-    \item \href{#method-vrule_mapping-validate}{\code{vrule_mapping$validate()}}
-    \item \href{#method-vrule_mapping-clone}{\code{vrule_mapping$clone()}}
-  }
+\itemize{
+\item \href{#method-vrule_mapping-new}{\code{vrule_mapping$new()}}
+\item \href{#method-vrule_mapping-validate}{\code{vrule_mapping$validate()}}
+\item \href{#method-vrule_mapping-clone}{\code{vrule_mapping$clone()}}
 }
-\if{html}{\out{<details open><summary>Inherited methods</summary>
+}
+\if{html}{\out{
+<details open><summary>Inherited methods</summary>
 <ul>
-  <li><code>vrule_abstract$getCategory()</code></li>
-  <li><code>vrule_abstract$getName()</code></li>
-  <li><code>vrule_abstract$getType()</code></li>
+<li><span class="pkg-link" data-pkg="vrule" data-topic="vrule_abstract" data-id="getCategory"><a href='../../vrule/html/vrule_abstract.html#method-vrule_abstract-getCategory'><code>vrule::vrule_abstract$getCategory()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="vrule" data-topic="vrule_abstract" data-id="getName"><a href='../../vrule/html/vrule_abstract.html#method-vrule_abstract-getName'><code>vrule::vrule_abstract$getName()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="vrule" data-topic="vrule_abstract" data-id="getType"><a href='../../vrule/html/vrule_abstract.html#method-vrule_abstract-getType'><code>vrule::vrule_abstract$getType()</code></a></span></li>
 </ul>
-</details>}}
+</details>
+}}
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-vrule_mapping-initialize"></a>}}
-\if{latex}{\out{\hypertarget{method-vrule_mapping-initialize}{}}}
-\subsection{\code{vrule_mapping$new()}}{
-  \subsection{Usage}{
-    \if{html}{\out{<div class="r">}}
-    \preformatted{vrule_mapping$new(
+\if{html}{\out{<a id="method-vrule_mapping-new"></a>}}
+\if{latex}{\out{\hypertarget{method-vrule_mapping-new}{}}}
+\subsection{Method \code{new()}}{
+Initializes a mapping-based validation rule
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{vrule_mapping$new(
   ref_data_url = NULL,
   ref_source_term = NULL,
   ref_target_term = NULL,
   data_target_term = NULL,
   ref_meta_url = NULL,
   ...
-)}
-    \if{html}{\out{</div>}}
-  }
+)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{ref_data_url}}{ref data url}
+
+\item{\code{ref_source_term}}{ref source term}
+
+\item{\code{ref_target_term}}{ref target term}
+
+\item{\code{data_target_term}}{data target term}
+
+\item{\code{ref_meta_url}}{ref metadata url}
+
+\item{\code{...}}{any other arg}
+}
+\if{html}{\out{</div>}}
+}
+}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-vrule_mapping-validate"></a>}}
 \if{latex}{\out{\hypertarget{method-vrule_mapping-validate}{}}}
-\subsection{\code{vrule_mapping$validate()}}{
-  \subsection{Usage}{
-    \if{html}{\out{<div class="r">}}
-    \preformatted{vrule_mapping$validate(value, row)}
-    \if{html}{\out{</div>}}
-  }
+\subsection{Method \code{validate()}}{
+Abstract method to validate data
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{vrule_mapping$validate(value, row)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{value}}{value}
+
+\item{\code{row}}{row}
+}
+\if{html}{\out{</div>}}
+}
+\subsection{Returns}{
+a validation report, object of class \link{vrule_report}
+}
+}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-vrule_mapping-clone"></a>}}
 \if{latex}{\out{\hypertarget{method-vrule_mapping-clone}{}}}
-\subsection{\code{vrule_mapping$clone()}}{
-  The objects of this class are cloneable with this method.
-  \subsection{Usage}{
-    \if{html}{\out{<div class="r">}}
-    \preformatted{vrule_mapping$clone(deep = FALSE)}
-    \if{html}{\out{</div>}}
-  }
-  \subsection{Arguments}{
-    \if{html}{\out{<div class="arguments">}}
-    \describe{
-      \item{\code{deep}}{Whether to make a deep clone.}
-    }
-    \if{html}{\out{</div>}}
-  }
+\subsection{Method \code{clone()}}{
+The objects of this class are cloneable with this method.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{vrule_mapping$clone(deep = FALSE)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{deep}}{Whether to make a deep clone.}
+}
+\if{html}{\out{</div>}}
+}
+}
 }

@@ -6,64 +6,96 @@
 \title{vrule_datatype}
 \description{
 vrule_datatype
+
+vrule_datatype
 }
 \section{Super classes}{
-\code{vrule_abstract} -> \code{vrule_abstract_simple} -> \code{vrule_datatype}
+\code{\link[vrule:vrule_abstract]{vrule::vrule_abstract}} -> \code{\link[vrule:vrule_abstract_simple]{vrule::vrule_abstract_simple}} -> \code{vrule_datatype}
+}
+\section{Public fields}{
+\if{html}{\out{<div class="r6-fields">}}
+\describe{
+\item{\code{datatype}}{data type}
+
+\item{\code{na_allowed}}{is NA allowed?}
+}
+\if{html}{\out{</div>}}
 }
 \section{Methods}{
 \subsection{Public methods}{
-  \itemize{
-    \item \href{#method-vrule_datatype-initialize}{\code{vrule_datatype$new()}}
-    \item \href{#method-vrule_datatype-validate}{\code{vrule_datatype$validate()}}
-    \item \href{#method-vrule_datatype-clone}{\code{vrule_datatype$clone()}}
-  }
+\itemize{
+\item \href{#method-vrule_datatype-new}{\code{vrule_datatype$new()}}
+\item \href{#method-vrule_datatype-validate}{\code{vrule_datatype$validate()}}
+\item \href{#method-vrule_datatype-clone}{\code{vrule_datatype$clone()}}
 }
-\if{html}{\out{<details open><summary>Inherited methods</summary>
+}
+\if{html}{\out{
+<details open><summary>Inherited methods</summary>
 <ul>
-  <li><code>vrule_abstract$getCategory()</code></li>
-  <li><code>vrule_abstract$getName()</code></li>
-  <li><code>vrule_abstract$getType()</code></li>
+<li><span class="pkg-link" data-pkg="vrule" data-topic="vrule_abstract" data-id="getCategory"><a href='../../vrule/html/vrule_abstract.html#method-vrule_abstract-getCategory'><code>vrule::vrule_abstract$getCategory()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="vrule" data-topic="vrule_abstract" data-id="getName"><a href='../../vrule/html/vrule_abstract.html#method-vrule_abstract-getName'><code>vrule::vrule_abstract$getName()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="vrule" data-topic="vrule_abstract" data-id="getType"><a href='../../vrule/html/vrule_abstract.html#method-vrule_abstract-getType'><code>vrule::vrule_abstract$getType()</code></a></span></li>
 </ul>
-</details>}}
+</details>
+}}
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-vrule_datatype-initialize"></a>}}
-\if{latex}{\out{\hypertarget{method-vrule_datatype-initialize}{}}}
-\subsection{\code{vrule_datatype$new()}}{
-  \subsection{Usage}{
-    \if{html}{\out{<div class="r">}}
-    \preformatted{vrule_datatype$new(datatype, na_allowed = FALSE, ...)}
-    \if{html}{\out{</div>}}
-  }
+\if{html}{\out{<a id="method-vrule_datatype-new"></a>}}
+\if{latex}{\out{\hypertarget{method-vrule_datatype-new}{}}}
+\subsection{Method \code{new()}}{
+Initializes a data type validation rule
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{vrule_datatype$new(datatype, na_allowed = FALSE, ...)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{datatype}}{data type}
+
+\item{\code{na_allowed}}{is NA allowed?}
+
+\item{\code{...}}{any other arg}
+}
+\if{html}{\out{</div>}}
+}
+}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-vrule_datatype-validate"></a>}}
 \if{latex}{\out{\hypertarget{method-vrule_datatype-validate}{}}}
-\subsection{\code{vrule_datatype$validate()}}{
-  \subsection{Usage}{
-    \if{html}{\out{<div class="r">}}
-    \preformatted{vrule_datatype$validate(value, ...)}
-    \if{html}{\out{</div>}}
-  }
+\subsection{Method \code{validate()}}{
+Abstract method to validate data
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{vrule_datatype$validate(value, ...)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{value}}{value}
+
+\item{\code{...}}{any other args}
+}
+\if{html}{\out{</div>}}
+}
+\subsection{Returns}{
+a validation report, object of class \link{vrule_report}
+}
+}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-vrule_datatype-clone"></a>}}
 \if{latex}{\out{\hypertarget{method-vrule_datatype-clone}{}}}
-\subsection{\code{vrule_datatype$clone()}}{
-  The objects of this class are cloneable with this method.
-  \subsection{Usage}{
-    \if{html}{\out{<div class="r">}}
-    \preformatted{vrule_datatype$clone(deep = FALSE)}
-    \if{html}{\out{</div>}}
-  }
-  \subsection{Arguments}{
-    \if{html}{\out{<div class="arguments">}}
-    \describe{
-      \item{\code{deep}}{Whether to make a deep clone.}
-    }
-    \if{html}{\out{</div>}}
-  }
+\subsection{Method \code{clone()}}{
+The objects of this class are cloneable with this method.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{vrule_datatype$clone(deep = FALSE)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{deep}}{Whether to make a deep clone.}
+}
+\if{html}{\out{</div>}}
+}
+}
 }

@@ -6,64 +6,83 @@
 \title{vrule_operator_and}
 \description{
 vrule_operator_and
+
+vrule_operator_and
 }
 \section{Super classes}{
-\code{vrule_abstract} -> \code{\link[vrule:vrule_operator_binary]{vrule_operator_binary}} -> \code{\link[vrule:vrule_operator_logical]{vrule_operator_logical}} -> \code{vrule_operator_and}
+\code{\link[vrule:vrule_abstract]{vrule::vrule_abstract}} -> \code{\link[vrule:vrule_operator_binary]{vrule::vrule_operator_binary}} -> \code{\link[vrule:vrule_operator_logical]{vrule::vrule_operator_logical}} -> \code{vrule_operator_and}
 }
 \section{Methods}{
 \subsection{Public methods}{
-  \itemize{
-    \item \href{#method-vrule_operator_and-initialize}{\code{vrule_operator_and$new()}}
-    \item \href{#method-vrule_operator_and-validate}{\code{vrule_operator_and$validate()}}
-    \item \href{#method-vrule_operator_and-clone}{\code{vrule_operator_and$clone()}}
-  }
+\itemize{
+\item \href{#method-vrule_operator_and-new}{\code{vrule_operator_and$new()}}
+\item \href{#method-vrule_operator_and-validate}{\code{vrule_operator_and$validate()}}
+\item \href{#method-vrule_operator_and-clone}{\code{vrule_operator_and$clone()}}
 }
-\if{html}{\out{<details open><summary>Inherited methods</summary>
+}
+\if{html}{\out{
+<details open><summary>Inherited methods</summary>
 <ul>
-  <li><code>vrule_abstract$getCategory()</code></li>
-  <li><code>vrule_abstract$getName()</code></li>
-  <li><code>vrule_abstract$getType()</code></li>
+<li><span class="pkg-link" data-pkg="vrule" data-topic="vrule_abstract" data-id="getCategory"><a href='../../vrule/html/vrule_abstract.html#method-vrule_abstract-getCategory'><code>vrule::vrule_abstract$getCategory()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="vrule" data-topic="vrule_abstract" data-id="getName"><a href='../../vrule/html/vrule_abstract.html#method-vrule_abstract-getName'><code>vrule::vrule_abstract$getName()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="vrule" data-topic="vrule_abstract" data-id="getType"><a href='../../vrule/html/vrule_abstract.html#method-vrule_abstract-getType'><code>vrule::vrule_abstract$getType()</code></a></span></li>
 </ul>
-</details>}}
+</details>
+}}
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-vrule_operator_and-initialize"></a>}}
-\if{latex}{\out{\hypertarget{method-vrule_operator_and-initialize}{}}}
-\subsection{\code{vrule_operator_and$new()}}{
-  \subsection{Usage}{
-    \if{html}{\out{<div class="r">}}
-    \preformatted{vrule_operator_and$new(...)}
-    \if{html}{\out{</div>}}
-  }
+\if{html}{\out{<a id="method-vrule_operator_and-new"></a>}}
+\if{latex}{\out{\hypertarget{method-vrule_operator_and-new}{}}}
+\subsection{Method \code{new()}}{
+Initializes a logical AND operator validation rule
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{vrule_operator_and$new(...)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{...}}{any other arg}
+}
+\if{html}{\out{</div>}}
+}
+}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-vrule_operator_and-validate"></a>}}
 \if{latex}{\out{\hypertarget{method-vrule_operator_and-validate}{}}}
-\subsection{\code{vrule_operator_and$validate()}}{
-  \subsection{Usage}{
-    \if{html}{\out{<div class="r">}}
-    \preformatted{vrule_operator_and$validate(value, row)}
-    \if{html}{\out{</div>}}
-  }
+\subsection{Method \code{validate()}}{
+Method to validate data
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{vrule_operator_and$validate(value, row)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{value}}{value}
+
+\item{\code{row}}{row}
+}
+\if{html}{\out{</div>}}
+}
+\subsection{Returns}{
+a validation report, object of class \link{vrule_report}
+}
+}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-vrule_operator_and-clone"></a>}}
 \if{latex}{\out{\hypertarget{method-vrule_operator_and-clone}{}}}
-\subsection{\code{vrule_operator_and$clone()}}{
-  The objects of this class are cloneable with this method.
-  \subsection{Usage}{
-    \if{html}{\out{<div class="r">}}
-    \preformatted{vrule_operator_and$clone(deep = FALSE)}
-    \if{html}{\out{</div>}}
-  }
-  \subsection{Arguments}{
-    \if{html}{\out{<div class="arguments">}}
-    \describe{
-      \item{\code{deep}}{Whether to make a deep clone.}
-    }
-    \if{html}{\out{</div>}}
-  }
+\subsection{Method \code{clone()}}{
+The objects of this class are cloneable with this method.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{vrule_operator_and$clone(deep = FALSE)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{deep}}{Whether to make a deep clone.}
+}
+\if{html}{\out{</div>}}
+}
+}
 }

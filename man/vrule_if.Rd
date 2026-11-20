@@ -6,64 +6,100 @@
 \title{vrule_if}
 \description{
 vrule_if
+
+vrule_if
 }
 \section{Super classes}{
-\code{vrule_abstract} -> \code{vrule_abstract_complex} -> \code{vrule_if}
+\code{\link[vrule:vrule_abstract]{vrule::vrule_abstract}} -> \code{\link[vrule:vrule_abstract_complex]{vrule::vrule_abstract_complex}} -> \code{vrule_if}
+}
+\section{Public fields}{
+\if{html}{\out{<div class="r6-fields">}}
+\describe{
+\item{\code{if_condition}}{if expression}
+
+\item{\code{then_apply}}{list of expressions to apply if condition is fulfilled}
+
+\item{\code{else_apply}}{list of expressions to apply if condition is not fulfilled}
+}
+\if{html}{\out{</div>}}
 }
 \section{Methods}{
 \subsection{Public methods}{
-  \itemize{
-    \item \href{#method-vrule_if-initialize}{\code{vrule_if$new()}}
-    \item \href{#method-vrule_if-validate}{\code{vrule_if$validate()}}
-    \item \href{#method-vrule_if-clone}{\code{vrule_if$clone()}}
-  }
+\itemize{
+\item \href{#method-vrule_if-new}{\code{vrule_if$new()}}
+\item \href{#method-vrule_if-validate}{\code{vrule_if$validate()}}
+\item \href{#method-vrule_if-clone}{\code{vrule_if$clone()}}
 }
-\if{html}{\out{<details open><summary>Inherited methods</summary>
+}
+\if{html}{\out{
+<details open><summary>Inherited methods</summary>
 <ul>
-  <li><code>vrule_abstract$getCategory()</code></li>
-  <li><code>vrule_abstract$getName()</code></li>
-  <li><code>vrule_abstract$getType()</code></li>
+<li><span class="pkg-link" data-pkg="vrule" data-topic="vrule_abstract" data-id="getCategory"><a href='../../vrule/html/vrule_abstract.html#method-vrule_abstract-getCategory'><code>vrule::vrule_abstract$getCategory()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="vrule" data-topic="vrule_abstract" data-id="getName"><a href='../../vrule/html/vrule_abstract.html#method-vrule_abstract-getName'><code>vrule::vrule_abstract$getName()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="vrule" data-topic="vrule_abstract" data-id="getType"><a href='../../vrule/html/vrule_abstract.html#method-vrule_abstract-getType'><code>vrule::vrule_abstract$getType()</code></a></span></li>
 </ul>
-</details>}}
+</details>
+}}
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-vrule_if-initialize"></a>}}
-\if{latex}{\out{\hypertarget{method-vrule_if-initialize}{}}}
-\subsection{\code{vrule_if$new()}}{
-  \subsection{Usage}{
-    \if{html}{\out{<div class="r">}}
-    \preformatted{vrule_if$new(if_condition, then_apply = list(), else_apply = list(), ...)}
-    \if{html}{\out{</div>}}
-  }
+\if{html}{\out{<a id="method-vrule_if-new"></a>}}
+\if{latex}{\out{\hypertarget{method-vrule_if-new}{}}}
+\subsection{Method \code{new()}}{
+Initializes a conditionnal validation rule
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{vrule_if$new(if_condition, then_apply = list(), else_apply = list(), ...)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{if_condition}}{if condition}
+
+\item{\code{then_apply}}{list of expressions to apply if condition is fulfilled}
+
+\item{\code{else_apply}}{list of expressions to apply if condition is not fulfilled}
+
+\item{\code{...}}{any other arg}
+}
+\if{html}{\out{</div>}}
+}
+}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-vrule_if-validate"></a>}}
 \if{latex}{\out{\hypertarget{method-vrule_if-validate}{}}}
-\subsection{\code{vrule_if$validate()}}{
-  \subsection{Usage}{
-    \if{html}{\out{<div class="r">}}
-    \preformatted{vrule_if$validate(value, row)}
-    \if{html}{\out{</div>}}
-  }
+\subsection{Method \code{validate()}}{
+Abstract method to validate data
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{vrule_if$validate(value, row)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{value}}{value}
+
+\item{\code{row}}{row}
+}
+\if{html}{\out{</div>}}
+}
+\subsection{Returns}{
+a validation report, object of class \link{vrule_report}
+}
+}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-vrule_if-clone"></a>}}
 \if{latex}{\out{\hypertarget{method-vrule_if-clone}{}}}
-\subsection{\code{vrule_if$clone()}}{
-  The objects of this class are cloneable with this method.
-  \subsection{Usage}{
-    \if{html}{\out{<div class="r">}}
-    \preformatted{vrule_if$clone(deep = FALSE)}
-    \if{html}{\out{</div>}}
-  }
-  \subsection{Arguments}{
-    \if{html}{\out{<div class="arguments">}}
-    \describe{
-      \item{\code{deep}}{Whether to make a deep clone.}
-    }
-    \if{html}{\out{</div>}}
-  }
+\subsection{Method \code{clone()}}{
+The objects of this class are cloneable with this method.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{vrule_if$clone(deep = FALSE)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{deep}}{Whether to make a deep clone.}
+}
+\if{html}{\out{</div>}}
+}
+}
 }

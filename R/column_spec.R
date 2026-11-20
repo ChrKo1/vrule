@@ -5,52 +5,68 @@
 #' @export
 column_spec <- R6Class("column_spec",
    public = list(
+     
+     #'@field name name
      name = NA,
+     #'@field urn urn
      urn = NA,
+     #'@field dimension dimension
      dimension = FALSE,
+     #'@field aliases aliases
      aliases = list(),
+     #'@field required required
      required = TRUE,
+     #'@field rules rules
      rules = list(),
-     initialize = function(json = NULL){
-       if(!is.null(json)){
-         self$name = json$name
-         self$urn = json$urn
-         self$dimension = if(!is.null(json$dimension)) json$dimension else FALSE
-         if(!is.null(json$aliases)) self$aliases = json$aliases
-         if(!is.null(json$required)) self$required = json$required
+     
+     #'@description Initializes a column specification
+     #'@param obj object of class \link{list}
+     initialize = function(obj = NULL){
+       if(!is.null(obj)){
+         self$name = obj$name
+         self$urn = obj$urn
+         self$dimension = if(!is.null(obj$dimension)) obj$dimension else FALSE
+         if(!is.null(obj$aliases)) self$aliases = obj$aliases
+         if(!is.null(obj$required)) self$required = obj$required
          #rules
-         if(!is.null(json$rules)){
-           self$rules = decodeVrules(json$rules)
+         if(!is.null(obj$rules)){
+           self$rules = decodeVrules(obj$rules)
          }
        }
      },
      
-     #setName
+     #'@description set name
+     #'@param name name
      setName = function(name){
        self$name = name
      },
      
-     #setURN
+     #'@description set URN
+     #'@param urn urn
      setURN = function(urn){
        self$urn = urn
      },
      
-     #isDimension
+     #'@description Set if the column is a dimension
+     #'@param isDimension isDimension
      isDimension = function(isDimension){
        self$dimension = isDimension
      },
      
-     #setAliases
+     #'@description Set aliases
+     #'@param aliases aliases
      setAliases = function(aliases){
        self$aliases = aliases
      },
      
-     #setRequired
+     #'@description Set if the column is required
+     #'@param required required
      setRequired = function(required){
        self$required = required
      },
      
-     #addRule
+     #'@description Adds a validation rule
+     #'@param rule rule
      addRule = function(rule){
        if(!inherits(rule, "vrule_abstract")){
          stop("The rule should be an vrule object")
@@ -58,7 +74,10 @@ column_spec <- R6Class("column_spec",
        self$rules[[length(self$rules)+1]] <- rule
      },
      
-     #validate
+     #'@description Method to validate column data
+     #'@param values values
+     #'@param rows rows
+     #'@return a validation report, object of class \link{vrule_report}
      validate = function(values, rows){
        if(length(self$rules)>0){
          the_rule = if(length(self$rules)>1){
@@ -66,11 +85,22 @@ column_spec <- R6Class("column_spec",
          }else{
            self$rules[[1]]
          }
-         out = NULL
+         report = NULL
+         j = which(names(rows) == self$name)
          if(length(values)==1){
-           out = the_rule$validate(values, rows) 
+           rep = the_rule$validate(values, rows)
+           if(nrow(rep$report)==0){
+             report = NULL
+           }else{
+             ii = as.integer(row.names(rows))
+             report = cbind(
+               i = ii, j = j,
+               row = paste("Row",ii),
+               col = self$name, col_alias = NA,
+               rep$report
+             )
+           }
          }else{
-           j = which(names(rows) == self$name)
            #vectorized form
            report =  do.call("rbind", lapply(1:length(values), function(i){
              rep = the_rule$validate(value = values[[i]], row = rows[i,])
@@ -83,18 +113,19 @@ column_spec <- R6Class("column_spec",
                rep$report
              )
            }))
-           out = vrule_report$new(
-             valid = !any(report$type == "ERROR"),
-             report = report
-           )
          }
+         out = vrule_report$new(
+           valid = !any(report$type == "ERROR"),
+           report = report
+         )
          return(out)
        }else{
          return(vrule_report$new())
        }
      },
      
-     #hasCodelist
+     #'@description Indicates if column specification includes a codelist validation rule
+     #'@return \code{TRUE} if it includes codelist validation, \code{FALSE} otherwise
      hasCodelist = function(){
        any(sapply(self$rules, is, "vrule_codelist")) |
        any(sapply(self$rules, is, "vrule_raw_codelist"))

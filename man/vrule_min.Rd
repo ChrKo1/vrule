@@ -6,64 +6,88 @@
 \title{vrule_min}
 \description{
 vrule_min
+
+vrule_min
+}
+\details{
+vrule_min
 }
 \section{Super classes}{
-\code{vrule_abstract} -> \code{\link[vrule:vrule_operator_binary]{vrule_operator_binary}} -> \code{\link[vrule:vrule_operator_relational]{vrule_operator_relational}} -> \code{vrule_min}
+\code{\link[vrule:vrule_abstract]{vrule::vrule_abstract}} -> \code{\link[vrule:vrule_operator_binary]{vrule::vrule_operator_binary}} -> \code{\link[vrule:vrule_operator_relational]{vrule::vrule_operator_relational}} -> \code{vrule_min}
 }
 \section{Methods}{
 \subsection{Public methods}{
-  \itemize{
-    \item \href{#method-vrule_min-initialize}{\code{vrule_min$new()}}
-    \item \href{#method-vrule_min-validate}{\code{vrule_min$validate()}}
-    \item \href{#method-vrule_min-clone}{\code{vrule_min$clone()}}
-  }
+\itemize{
+\item \href{#method-vrule_min-new}{\code{vrule_min$new()}}
+\item \href{#method-vrule_min-validate}{\code{vrule_min$validate()}}
+\item \href{#method-vrule_min-clone}{\code{vrule_min$clone()}}
 }
-\if{html}{\out{<details open><summary>Inherited methods</summary>
+}
+\if{html}{\out{
+<details open><summary>Inherited methods</summary>
 <ul>
-  <li><code>vrule_abstract$getCategory()</code></li>
-  <li><code>vrule_abstract$getName()</code></li>
-  <li><code>vrule_abstract$getType()</code></li>
+<li><span class="pkg-link" data-pkg="vrule" data-topic="vrule_abstract" data-id="getCategory"><a href='../../vrule/html/vrule_abstract.html#method-vrule_abstract-getCategory'><code>vrule::vrule_abstract$getCategory()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="vrule" data-topic="vrule_abstract" data-id="getName"><a href='../../vrule/html/vrule_abstract.html#method-vrule_abstract-getName'><code>vrule::vrule_abstract$getName()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="vrule" data-topic="vrule_abstract" data-id="getType"><a href='../../vrule/html/vrule_abstract.html#method-vrule_abstract-getType'><code>vrule::vrule_abstract$getType()</code></a></span></li>
 </ul>
-</details>}}
+</details>
+}}
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-vrule_min-initialize"></a>}}
-\if{latex}{\out{\hypertarget{method-vrule_min-initialize}{}}}
-\subsection{\code{vrule_min$new()}}{
-  \subsection{Usage}{
-    \if{html}{\out{<div class="r">}}
-    \preformatted{vrule_min$new(minValue, ...)}
-    \if{html}{\out{</div>}}
-  }
+\if{html}{\out{<a id="method-vrule_min-new"></a>}}
+\if{latex}{\out{\hypertarget{method-vrule_min-new}{}}}
+\subsection{Method \code{new()}}{
+Initializes a min threshold validation rule
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{vrule_min$new(minValue, ...)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{minValue}}{min value}
+
+\item{\code{...}}{any other arg}
+}
+\if{html}{\out{</div>}}
+}
+}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-vrule_min-validate"></a>}}
 \if{latex}{\out{\hypertarget{method-vrule_min-validate}{}}}
-\subsection{\code{vrule_min$validate()}}{
-  \subsection{Usage}{
-    \if{html}{\out{<div class="r">}}
-    \preformatted{vrule_min$validate(value, ...)}
-    \if{html}{\out{</div>}}
-  }
+\subsection{Method \code{validate()}}{
+Validates data based on a min threshold
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{vrule_min$validate(value, ...)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{value}}{value}
+
+\item{\code{...}}{any other args}
+}
+\if{html}{\out{</div>}}
+}
+\subsection{Returns}{
+a validation report, object of class \link{vrule_report}
+}
+}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-vrule_min-clone"></a>}}
 \if{latex}{\out{\hypertarget{method-vrule_min-clone}{}}}
-\subsection{\code{vrule_min$clone()}}{
-  The objects of this class are cloneable with this method.
-  \subsection{Usage}{
-    \if{html}{\out{<div class="r">}}
-    \preformatted{vrule_min$clone(deep = FALSE)}
-    \if{html}{\out{</div>}}
-  }
-  \subsection{Arguments}{
-    \if{html}{\out{<div class="arguments">}}
-    \describe{
-      \item{\code{deep}}{Whether to make a deep clone.}
-    }
-    \if{html}{\out{</div>}}
-  }
+\subsection{Method \code{clone()}}{
+The objects of this class are cloneable with this method.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{vrule_min$clone(deep = FALSE)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{deep}}{Whether to make a deep clone.}
+}
+\if{html}{\out{</div>}}
+}
+}
 }

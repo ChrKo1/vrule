@@ -6,138 +6,210 @@
 \title{column_spec}
 \description{
 column_spec
+
+column_spec
+}
+\section{Public fields}{
+\if{html}{\out{<div class="r6-fields">}}
+\describe{
+\item{\code{name}}{name}
+
+\item{\code{urn}}{urn}
+
+\item{\code{dimension}}{dimension}
+
+\item{\code{aliases}}{aliases}
+
+\item{\code{required}}{required}
+
+\item{\code{rules}}{rules}
+}
+\if{html}{\out{</div>}}
 }
 \section{Methods}{
 \subsection{Public methods}{
-  \itemize{
-    \item \href{#method-column_spec-initialize}{\code{column_spec$new()}}
-    \item \href{#method-column_spec-setName}{\code{column_spec$setName()}}
-    \item \href{#method-column_spec-setURN}{\code{column_spec$setURN()}}
-    \item \href{#method-column_spec-isDimension}{\code{column_spec$isDimension()}}
-    \item \href{#method-column_spec-setAliases}{\code{column_spec$setAliases()}}
-    \item \href{#method-column_spec-setRequired}{\code{column_spec$setRequired()}}
-    \item \href{#method-column_spec-addRule}{\code{column_spec$addRule()}}
-    \item \href{#method-column_spec-validate}{\code{column_spec$validate()}}
-    \item \href{#method-column_spec-hasCodelist}{\code{column_spec$hasCodelist()}}
-    \item \href{#method-column_spec-clone}{\code{column_spec$clone()}}
-  }
+\itemize{
+\item \href{#method-column_spec-new}{\code{column_spec$new()}}
+\item \href{#method-column_spec-setName}{\code{column_spec$setName()}}
+\item \href{#method-column_spec-setURN}{\code{column_spec$setURN()}}
+\item \href{#method-column_spec-isDimension}{\code{column_spec$isDimension()}}
+\item \href{#method-column_spec-setAliases}{\code{column_spec$setAliases()}}
+\item \href{#method-column_spec-setRequired}{\code{column_spec$setRequired()}}
+\item \href{#method-column_spec-addRule}{\code{column_spec$addRule()}}
+\item \href{#method-column_spec-validate}{\code{column_spec$validate()}}
+\item \href{#method-column_spec-hasCodelist}{\code{column_spec$hasCodelist()}}
+\item \href{#method-column_spec-clone}{\code{column_spec$clone()}}
+}
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-column_spec-initialize"></a>}}
-\if{latex}{\out{\hypertarget{method-column_spec-initialize}{}}}
-\subsection{\code{column_spec$new()}}{
-  \subsection{Usage}{
-    \if{html}{\out{<div class="r">}}
-    \preformatted{column_spec$new(json = NULL)}
-    \if{html}{\out{</div>}}
-  }
+\if{html}{\out{<a id="method-column_spec-new"></a>}}
+\if{latex}{\out{\hypertarget{method-column_spec-new}{}}}
+\subsection{Method \code{new()}}{
+Initializes a column specification
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{column_spec$new(obj = NULL)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{obj}}{object of class \link{list}}
+}
+\if{html}{\out{</div>}}
+}
+}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-column_spec-setName"></a>}}
 \if{latex}{\out{\hypertarget{method-column_spec-setName}{}}}
-\subsection{\code{column_spec$setName()}}{
-  \subsection{Usage}{
-    \if{html}{\out{<div class="r">}}
-    \preformatted{column_spec$setName(name)}
-    \if{html}{\out{</div>}}
-  }
+\subsection{Method \code{setName()}}{
+set name
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{column_spec$setName(name)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{name}}{name}
+}
+\if{html}{\out{</div>}}
+}
+}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-column_spec-setURN"></a>}}
 \if{latex}{\out{\hypertarget{method-column_spec-setURN}{}}}
-\subsection{\code{column_spec$setURN()}}{
-  \subsection{Usage}{
-    \if{html}{\out{<div class="r">}}
-    \preformatted{column_spec$setURN(urn)}
-    \if{html}{\out{</div>}}
-  }
+\subsection{Method \code{setURN()}}{
+set URN
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{column_spec$setURN(urn)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{urn}}{urn}
+}
+\if{html}{\out{</div>}}
+}
+}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-column_spec-isDimension"></a>}}
 \if{latex}{\out{\hypertarget{method-column_spec-isDimension}{}}}
-\subsection{\code{column_spec$isDimension()}}{
-  \subsection{Usage}{
-    \if{html}{\out{<div class="r">}}
-    \preformatted{column_spec$isDimension(isDimension)}
-    \if{html}{\out{</div>}}
-  }
+\subsection{Method \code{isDimension()}}{
+Set if the column is a dimension
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{column_spec$isDimension(isDimension)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{isDimension}}{isDimension}
+}
+\if{html}{\out{</div>}}
+}
+}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-column_spec-setAliases"></a>}}
 \if{latex}{\out{\hypertarget{method-column_spec-setAliases}{}}}
-\subsection{\code{column_spec$setAliases()}}{
-  \subsection{Usage}{
-    \if{html}{\out{<div class="r">}}
-    \preformatted{column_spec$setAliases(aliases)}
-    \if{html}{\out{</div>}}
-  }
+\subsection{Method \code{setAliases()}}{
+Set aliases
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{column_spec$setAliases(aliases)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{aliases}}{aliases}
+}
+\if{html}{\out{</div>}}
+}
+}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-column_spec-setRequired"></a>}}
 \if{latex}{\out{\hypertarget{method-column_spec-setRequired}{}}}
-\subsection{\code{column_spec$setRequired()}}{
-  \subsection{Usage}{
-    \if{html}{\out{<div class="r">}}
-    \preformatted{column_spec$setRequired(required)}
-    \if{html}{\out{</div>}}
-  }
+\subsection{Method \code{setRequired()}}{
+Set if the column is required
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{column_spec$setRequired(required)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{required}}{required}
+}
+\if{html}{\out{</div>}}
+}
+}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-column_spec-addRule"></a>}}
 \if{latex}{\out{\hypertarget{method-column_spec-addRule}{}}}
-\subsection{\code{column_spec$addRule()}}{
-  \subsection{Usage}{
-    \if{html}{\out{<div class="r">}}
-    \preformatted{column_spec$addRule(rule)}
-    \if{html}{\out{</div>}}
-  }
+\subsection{Method \code{addRule()}}{
+Adds a validation rule
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{column_spec$addRule(rule)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{rule}}{rule}
+}
+\if{html}{\out{</div>}}
+}
+}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-column_spec-validate"></a>}}
 \if{latex}{\out{\hypertarget{method-column_spec-validate}{}}}
-\subsection{\code{column_spec$validate()}}{
-  \subsection{Usage}{
-    \if{html}{\out{<div class="r">}}
-    \preformatted{column_spec$validate(values, rows)}
-    \if{html}{\out{</div>}}
-  }
+\subsection{Method \code{validate()}}{
+Method to validate column data
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{column_spec$validate(values, rows)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{values}}{values}
+
+\item{\code{rows}}{rows}
+}
+\if{html}{\out{</div>}}
+}
+\subsection{Returns}{
+a validation report, object of class \link{vrule_report}
+}
+}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-column_spec-hasCodelist"></a>}}
 \if{latex}{\out{\hypertarget{method-column_spec-hasCodelist}{}}}
-\subsection{\code{column_spec$hasCodelist()}}{
-  \subsection{Usage}{
-    \if{html}{\out{<div class="r">}}
-    \preformatted{column_spec$hasCodelist()}
-    \if{html}{\out{</div>}}
-  }
+\subsection{Method \code{hasCodelist()}}{
+Indicates if column specification includes a codelist validation rule
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{column_spec$hasCodelist()}\if{html}{\out{</div>}}
 }
 
+\subsection{Returns}{
+\code{TRUE} if it includes codelist validation, \code{FALSE} otherwise
+}
+}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-column_spec-clone"></a>}}
 \if{latex}{\out{\hypertarget{method-column_spec-clone}{}}}
-\subsection{\code{column_spec$clone()}}{
-  The objects of this class are cloneable with this method.
-  \subsection{Usage}{
-    \if{html}{\out{<div class="r">}}
-    \preformatted{column_spec$clone(deep = FALSE)}
-    \if{html}{\out{</div>}}
-  }
-  \subsection{Arguments}{
-    \if{html}{\out{<div class="arguments">}}
-    \describe{
-      \item{\code{deep}}{Whether to make a deep clone.}
-    }
-    \if{html}{\out{</div>}}
-  }
+\subsection{Method \code{clone()}}{
+The objects of this class are cloneable with this method.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{column_spec$clone(deep = FALSE)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{deep}}{Whether to make a deep clone.}
+}
+\if{html}{\out{</div>}}
+}
+}
 }
