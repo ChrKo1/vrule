@@ -40,33 +40,38 @@ vrule_raw_codelist <- R6Class("vrule_raw_codelist",
 #' @docType class
 #' @importFrom R6 R6Class
 #' @export
+#' Validate against values from an R package
+#' @name vrule_codelist_R
+#' @docType class
+#' @export
 vrule_codelist_R <- R6::R6Class(
-  "vrule_Robject",
+  "vrule_codelist_R",
   inherit = vrule_raw_codelist,
   public = list(
     ref_package = NULL,
     ref_data = NULL,
-    ref_data_column = NULL,
 
-    initialize = function(ref_package, ref_data, ref_data_column, ...) {
-      codelist <- getExportedValue(ref_package, ref_data)
+    initialize = function(ref_package, ref_data, ...) {
+      ref_env <- new.env(parent = baseenv())
 
-      if (!ref_data_column %in% names(codelist)) {
-        stop(
-          "Column ", ref_data_column, " not found in ",
-          ref_package, "::", ref_data, ".",
-          call. = FALSE
-        )
+      datasets <- utils::data(package = ref_package)$results[, "Item"]
+      utils::data(
+        list = datasets,
+        package = ref_package,
+        envir = ref_env
+      )
+
+      ref_values <- eval(parse(text = ref_data), envir = ref_env)
+
+      if (!is.atomic(ref_values) || !is.null(dim(ref_values))) {
+        stop("ref_data must return a vector of allowed values.",
+             call. = FALSE)
       }
 
       self$ref_package <- ref_package
       self$ref_data <- ref_data
-      self$ref_data_column <- ref_data_column
 
-      super$initialize(
-        ref_values = unique(codelist[[ref_data_column]]),
-        ...
-      )
+      super$initialize(ref_values = unique(ref_values), ...)
     }
   )
 )

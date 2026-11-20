@@ -8,13 +8,13 @@
 vrule_codelist_R
 }
 \section{Super classes}{
-\code{vrule_abstract} -> \code{vrule_abstract_simple} -> \code{\link[vrule:vrule_raw_codelist]{vrule_raw_codelist}} -> \code{vrule_Robject}
+\code{vrule_abstract} -> \code{vrule_abstract_simple} -> \code{\link[vrule:vrule_raw_codelist]{vrule_raw_codelist}} -> \code{vrule_codelist_R}
 }
 \section{Methods}{
 \subsection{Public methods}{
   \itemize{
-    \item \href{#method-vrule_Robject-initialize}{\code{vrule_Robject$new()}}
-    \item \href{#method-vrule_Robject-clone}{\code{vrule_Robject$clone()}}
+    \item \href{#method-vrule_codelist_R-initialize}{\code{vrule_codelist_R$new()}}
+    \item \href{#method-vrule_codelist_R-clone}{\code{vrule_codelist_R$clone()}}
   }
 }
 \if{html}{\out{<details open><summary>Inherited methods</summary>
@@ -26,24 +26,24 @@ vrule_codelist_R
 </ul>
 </details>}}
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-vrule_Robject-initialize"></a>}}
-\if{latex}{\out{\hypertarget{method-vrule_Robject-initialize}{}}}
-\subsection{\code{vrule_Robject$new()}}{
+\if{html}{\out{<a id="method-vrule_codelist_R-initialize"></a>}}
+\if{latex}{\out{\hypertarget{method-vrule_codelist_R-initialize}{}}}
+\subsection{\code{vrule_codelist_R$new()}}{
   \subsection{Usage}{
     \if{html}{\out{<div class="r">}}
-    \preformatted{vrule_Robject$new(ref_package, ref_data, ref_data_column, ...)}
+    \preformatted{vrule_codelist_R$new(ref_package, ref_data, ...)}
     \if{html}{\out{</div>}}
   }
 }
 
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-vrule_Robject-clone"></a>}}
-\if{latex}{\out{\hypertarget{method-vrule_Robject-clone}{}}}
-\subsection{\code{vrule_Robject$clone()}}{
+\if{html}{\out{<a id="method-vrule_codelist_R-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-vrule_codelist_R-clone}{}}}
+\subsection{\code{vrule_codelist_R$clone()}}{
   The objects of this class are cloneable with this method.
   \subsection{Usage}{
     \if{html}{\out{<div class="r">}}
-    \preformatted{vrule_Robject$clone(deep = FALSE)}
+    \preformatted{vrule_codelist_R$clone(deep = FALSE)}
     \if{html}{\out{</div>}}
   }
   \subsection{Arguments}{
